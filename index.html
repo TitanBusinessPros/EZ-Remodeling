@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZ Remodels LLC | Holiday Specials & Remodeling Services</title>
+    <link rel="icon" href="https://github.com/TitanBusinessPros/EZ-Remodeling/raw/main/EZ-Favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-image: url('https://github.com/TitanBusinessPros/EZ-Remodeling/raw/main/EZ-BG-1.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #f0f0f0;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Christmas-themed overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 40, 20, 0.85), rgba(80, 0, 0, 0.8));
+            z-index: -1;
+        }
+        
+        /* Christmas lights animation */
+        .christmas-lights {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(
+                90deg,
+                #ff0000,
+                #ff0000 10px,
+                #00ff00 10px,
+                #00ff00 20px,
+                #ffffff 20px,
+                #ffffff 30px
+            );
+            z-index: 999;
+            animation: lights 2s linear infinite;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        @keyframes lights {
+            0% { background-position: 0 0; }
+            100% { background-position: 60px 0; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Huge top logo with Christmas border */
+        .main-logo-container {
+            text-align: center;
+            padding: 60px 0 20px;
+            animation: float 6s ease-in-out infinite;
+            position: relative;
+        }
+        
+        .main-logo-container::before {
+            content: '🎄';
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            font-size: 2.5rem;
+            animation: sway 3s ease-in-out infinite;
+        }
+        
+        .main-logo-container::after {
+            content: '🎄';
+            position: absolute;
+            right: 10%;
+            top: 10%;
+            font-size: 2.5rem;
+            animation: sway 3s ease-in-out infinite 1.5s;
+        }
+        
+        @keyframes sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .main-logo {
+            max-width: 500px;
+            height: auto;
+            filter: drop-shadow(0 5px 15px rgba(255, 0, 0, 0.5));
+            transition: transform 0.5s ease;
+            border-radius: 15px;
+            padding: 10px;
+            background: rgba(0, 80, 0, 0.2);
+            border: 3px solid #ff0000;
+        }
+        
+        .main-logo:hover {
+            transform: scale(1.03);
+            border-color: #00ff00;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        /* Header styles */
+        header {
+            background: linear-gradient(to bottom, #8B0000, #006400);
+            padding: 20px 0 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 5px solid #daa520;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '❄️ ❄️ ❄️';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            opacity: 0.7;
+            animation: snow 20s linear infinite;
+        }
+        
+        @keyframes snow {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+        
+        .company-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            background: linear-gradient(to right, #ff0000, #00ff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+        
+        .holiday-special {
+            background: linear-gradient(45deg, #ff0000, #00ff00);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: 700;
+            font-size: 1.3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid #daa520;
+        }
+        
+        .phone-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #ff0000, #00ff00);
+            color: white;
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid #daa520;
+        }
+        
+        .phone-number:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #00ff00, #ff0000);
+            box-shadow: 0 6px 12px rgba(255, 0, 0, 0.4);
+        }
+        
+        .phone-number a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .phone-number i {
+            margin-right: 10px;
+        }
+        
+        /* Main content */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .services, .about {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(0, 60, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 2px solid #ff0000;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services::before, .about::before {
+            content: '★';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #daa520;
+            font-size: 1.5rem;
+        }
+        
+        h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #00ff00;
+            font-size: 1.8rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+        
+        .services-list {
+            list-style-type: none;
+        }
+        
+        .services-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+        }
+        
+        .services-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .services-list i {
+            color: #ff0000;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .about p {
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        /* Check out my work button */
+        .work-button-container {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .work-button-container::before {
+            content: '🎁';
+            position: absolute;
+            left: 25%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+        
+        .work-button-container::after {
+            content: '🎁';
+            position: absolute;
+            right: 25%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            animation: bounce 2s infinite 1s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.2); }
+        }
+        
+        .work-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff0000, #00ff00);
+            color: white;
+            padding: 16px 45px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid #daa520;
+        }
+        
+        .work-button:hover {
+            background: linear-gradient(45deg, #00ff00, #ff0000);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+        }
+        
+        .work-button i {
+            margin-right: 10px;
+        }
+        
+        /* Contact form */
+        .contact-section {
+            background: rgba(100, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 60px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 2px solid #00ff00;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '✉️';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #00ff00;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 14px;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00ff00;
+            box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(to right, #ff0000, #00ff00);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            border: 2px solid #daa520;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(to right, #00ff00, #ff0000);
+        }
+        
+        /* Audio controls */
+        .audio-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #006400, #8B0000);
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #daa520;
+        }
+        
+        .audio-controls button {
+            background: #ff0000;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        
+        .audio-controls button:hover {
+            background: #00ff00;
+        }
+        
+        .audio-label {
+            font-weight: 600;
+            color: #00ff00;
+            margin-right: 5px;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to top, #8B0000, #006400);
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 5px solid #daa520;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '🎅 Merry Christmas! 🎄';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: #daa520;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: #00ff00;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #ff0000;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 992px) {
+            .main-logo {
+                max-width: 400px;
+            }
+            
+            .work-button-container::before,
+            .work-button-container::after {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .company-name {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .phone-number {
+                font-size: 1.5rem;
+            }
+            
+            .main-logo {
+                max-width: 300px;
+            }
+            
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .audio-controls {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 12px;
+            }
+            
+            .audio-label {
+                display: none;
+            }
+            
+            .main-logo-container::before,
+            .main-logo-container::after {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-logo {
+                max-width: 250px;
+            }
+            
+            .company-name {
+                font-size: 2rem;
+            }
+            
+            .phone-number {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
+            
+            .work-button {
+                padding: 14px 30px;
+                font-size: 1.2rem;
+            }
+            
+            .holiday-special {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+        
+        /* Additional Christmas styling */
+        .highlight {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .service-highlight {
+            color: #ff0000;
+            font-weight: 600;
+        }
+        
+        .snowflake {
+            position: fixed;
+            color: white;
+            font-size: 1rem;
+            z-index: 999;
+            user-select: none;
+            pointer-events: none;
+            animation: snowfall linear infinite;
+        }
+        
+        @keyframes snowfall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* REMODELING MATCH GAME STYLES */
+        .game-section {
+            background: linear-gradient(135deg, #8B0000, #006400);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            margin: 60px auto;
+            text-align: center;
+            border: 3px solid #daa520;
+            max-width: 1000px;
+        }
+
+        .game-section h2 {
+            color: #daa520;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-section .game-description {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .game-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid #daa520;
+        }
+
+        .game-header {
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            font-size: 2em;
+            color: #daa520;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .target-display {
+            color: #00ff00;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .game-progress-bar {
+            width: 100%;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+            border: 1px solid #daa520;
+        }
+
+        .game-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff0000, #00ff00);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-grid {
+            display: inline-grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            gap: 3px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 15px;
+            max-width: 100%;
+            width: 100%;
+            aspect-ratio: 1;
+            box-sizing: border-box;
+            border: 2px solid #daa520;
+        }
+
+        @media (min-width: 480px) {
+            .game-grid {
+                max-width: 480px;
+            }
+        }
+
+        .game-tile {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+            touch-action: manipulation;
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+        }
+
+        .game-tile:hover {
+            transform: scale(1.05);
+        }
+
+        .game-tile.selected {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(218, 165, 32, 0.9);
+            border: 3px solid #daa520;
+        }
+
+        .game-tile.matched {
+            animation: gamematchPulse 0.5s ease;
+        }
+
+        @keyframes gamematchPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+        }
+
+        .game-completion-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: linear-gradient(135deg, #8B0000, #006400);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            z-index: 1001;
+            text-align: center;
+            transition: transform 0.3s ease;
+            max-width: 90%;
+            box-sizing: border-box;
+            border: 3px solid #daa520;
+        }
+
+        .game-completion-modal.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .game-completion-modal h2 {
+            color: #daa520;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-completion-modal p {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        .game-play-again-btn {
+            background: linear-gradient(to right, #ff0000, #00ff00);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid #daa520;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-play-again-btn:hover {
+            background: linear-gradient(to right, #00ff00, #ff0000);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .game-container {
+                padding: 15px;
+            }
+
+            .game-tile {
+                font-size: 1.3em;
+            }
+
+            .game-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Christmas Lights -->
+    <div class="christmas-lights"></div>
+    
+    <!-- Snowflakes will be added by JavaScript -->
+    
+    <!-- Huge Top Logo -->
+    <div class="main-logo-container">
+        <img src="https://github.com/TitanBusinessPros/EZ-Remodeling/raw/main/EZ-Logo-1.png" alt="EZ Remodels LLC Logo" class="main-logo">
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="company-name">EZ REMODELS LLC</h1>
+            <p class="tagline">Professional Remodeling & Renovation Services</p>
+            <div class="holiday-special">
+                🎁 HOLIDAY SPECIAL: Book Before Dec 25th & Get 10% Off! 🎁
+            </div>
+            <div class="phone-number">
+                <a href="tel:405-464-9273">
+                    <i class="fas fa-phone-alt"></i>405-464-9273
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <section class="services">
+                <h2><i class="fas fa-hammer"></i> Our Festive Services</h2>
+                <ul class="services-list">
+                    <li><i class="fas fa-home"></i> Complete Home Remodeling</li>
+                    <li><i class="fas fa-kitchen-set"></i> Kitchen Renovations</li>
+                    <li><i class="fas fa-bath"></i> Bathroom Remodels</li>
+                    <li><i class="fas fa-layer-group"></i> Room Additions</li>
+                    <li><i class="fas fa-tools"></i> Custom Carpentry</li>
+                    <li><i class="fas fa-paint-roller"></i> Interior & Exterior Painting</li>
+                    <li><i class="fas fa-border-style"></i> Flooring Installation</li>
+                    <li><i class="fas fa-couch"></i> Custom Cabinetry</li>
+                    <li><i class="fas fa-lightbulb"></i> Lighting Installation</li>
+                    <li><i class="fas fa-trowel-bricks"></i> Tile Work</li>
+                </ul>
+            </section>
+            
+            <section class="about">
+                <h2><i class="fas fa-star"></i> Why Choose EZ Remodels?</h2>
+                <p>With <span class="highlight">years of experience</span> in the remodeling industry, EZ Remodels LLC is committed to delivering exceptional craftsmanship and outstanding customer service. We take pride in transforming your living spaces into the home of your dreams.</p>
+                <p>Our team of skilled professionals works closely with you to understand your vision and bring it to life with precision and attention to detail. From initial design to final installation, we ensure a <span class="highlight">seamless remodeling experience</span>.</p>
+                <p>We use only <span class="highlight">high-quality materials</span> and the latest techniques to guarantee lasting results that exceed your expectations. Your satisfaction is our top priority.</p>
+                <p><span class="service-highlight">Licensed, insured, and dedicated to excellence</span>, EZ Remodels LLC is your trusted partner for all your remodeling needs in Oklahoma and surrounding areas.</p>
+                <p class="highlight">🎄 Schedule your holiday remodeling project today and make your home festive and functional! 🎄</p>
+            </section>
+        </div>
+        
+        <!-- Check Out My Work Button -->
+        <div class="work-button-container">
+            <a href="https://www.facebook.com/profile.php?id=100064114029661&sk=photos" target="_blank" class="work-button">
+                <i class="fab fa-facebook"></i> View Our Portfolio
+            </a>
+        </div>
+        
+        <!-- Contact Form -->
+        <section class="contact-section">
+            <h2><i class="fas fa-envelope"></i> Get Your Free Holiday Estimate</h2>
+            <form class="contact-form" action="https://formsubmit.co/Ezremodels918@gmail.com" method="POST">
+                <!-- FormSubmit configuration -->
+                <input type="hidden" name="_subject" value="Christmas Special - Contact Form Submission from EZ Remodels Website">
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting EZ Remodels LLC! We have received your message and will get back to you within 24-48 hours. For immediate assistance, please call us at 405-464-9273. Merry Christmas!">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service"><i class="fas fa-tools"></i> Service Interested In</label>
+                    <select id="service" name="service">
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Kitchen Remodel">Kitchen Remodel</option>
+                        <option value="Bathroom Remodel">Bathroom Remodel</option>
+                        <option value="Home Addition">Home Addition</option>
+                        <option value="Complete Home Remodel">Complete Home Remodel</option>
+                        <option value="Painting Services">Painting Services</option>
+                        <option value="Flooring Installation">Flooring Installation</option>
+                        <option value="Custom Carpentry">Custom Carpentry</option>
+                        <option value="Holiday Special">Holiday Special (10% Off)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-clipboard-list"></i> Project Details</label>
+                    <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </section>
+    </div>
+    
+    <!-- REMODELING MATCH GAME -->
+    <div class="container">
+        <section class="game-section">
+            <h2>🔨 Try Our Remodeling Match Game! 🔧</h2>
+            <p class="game-description">Match remodeling tools to reach 100,000 points! Just like our work, match three or more to build something amazing.</p>
+            
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="score-display">Score: <span id="gameScore">0</span></div>
+                    <div class="target-display">Goal: 100,000 Points</div>
+                </div>
+                
+                <div class="game-progress-bar">
+                    <div class="game-progress-fill" id="gameProgress" style="width: 0%">0%</div>
+                </div>
+                
+                <div class="game-grid" id="remodelGameGrid"></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="game-completion-modal" id="gameCompletionModal">
+        <h2>🎊 Congratulations! 🎊</h2>
+        <p id="gameCompletionText">You reached 100,000 points!</p>
+        <button class="game-play-again-btn" onclick="resetRemodelGame()">Play Again</button>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p><i class="fas fa-map-marker-alt"></i> Serving Tulsa and Surrounding Areas</p>
+            <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 6:00 PM | Saturday: 9:00 AM - 2:00 PM</p>
+            <p>© <span id="current-year"></span> EZ Remodels LLC. All rights reserved.</p>
+            <p style="color: #daa520; margin-top: 10px;">🎄 Merry Christmas & Happy Holidays! 🎅</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100064114029661" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="tel:405-464-9273" title="Call Us">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+                <a href="/cdn-cgi/l/email-protection#bbfec1c9ded6d4dfded7c8828a83fbdcd6dad2d795d8d4d6" title="Email Us">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Audio Player -->
+    <div class="audio-controls">
+        <span class="audio-label">Holiday Tune:</span>
+        <audio id="ez-anthem" loop>
+            <source src="https://github.com/TitanBusinessPros/EZ-Remodeling/raw/main/EZ%20Remodels%20Anthem.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="play-btn" title="Play/Pause">
+            <i class="fas fa-play"></i>
+        </button>
+        <button id="volume-up" title="Volume Up">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="volume-down" title="Volume Down">
+            <i class="fas fa-volume-down"></i>
+        </button>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Create snowflakes
+        function createSnowflakes() {
+            const snowflakeContainer = document.body;
+            const snowflakeCount = 50;
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❄';
+                
+                // Random properties
+                const size = Math.random() * 20 + 10;
+                const startPosition = Math.random() * 100;
+                const animationDuration = Math.random() * 10 + 10;
+                const opacity = Math.random() * 0.5 + 0.5;
+                
+                snowflake.style.left = `${startPosition}vw`;
+                snowflake.style.fontSize = `${size}px`;
+                snowflake.style.opacity = opacity;
+                snowflake.style.animationDuration = `${animationDuration}s`;
+                snowflake.style.animationDelay = `${Math.random() * 5}s`;
+                
+                snowflakeContainer.appendChild(snowflake);
+                
+                // Remove snowflake after animation completes
+                setTimeout(() => {
+                    snowflake.remove();
+                }, animationDuration * 1000);
+            }
+        }
+        
+        // Create snowflakes periodically
+        createSnowflakes();
+        setInterval(createSnowflakes, 3000);
+        
+        // Audio controls
+        const audio = document.getElementById('ez-anthem');
+        const playBtn = document.getElementById('play-btn');
+        const volumeUp = document.getElementById('volume-up');
+        const volumeDown = document.getElementById('volume-down');
+        const playIcon = playBtn.querySelector('i');
+        
+        // Try to autoplay the audio (may be blocked by browser policy)
+        window.addEventListener('load', function() {
+            audio.volume = 0.4; // Start at moderate volume
+            audio.play().then(() => {
+                playIcon.className = 'fas fa-pause';
+                playBtn.style.backgroundColor = '#00ff00';
+            }).catch(error => {
+                console.log("Autoplay prevented. User interaction required.");
+                // Show visual cue that audio is available
+                playBtn.style.boxShadow = '0 0 10px rgba(255, 0, 0, 0.7)';
+            });
+        });
+        
+        // Play/Pause button
+        playBtn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playIcon.className = 'fas fa-pause';
+                playBtn.style.backgroundColor = '#00ff00';
+                playBtn.style.boxShadow = 'none';
+            } else {
+                audio.pause();
+                playIcon.className = 'fas fa-play';
+                playBtn.style.backgroundColor = '#ff0000';
+            }
+        });
+        
+        // Volume up button
+        volumeUp.addEventListener('click', function() {
+            if (audio.volume < 1) {
+                audio.volume = Math.min(audio.volume + 0.1, 1);
+                volumeUp.style.backgroundColor = '#00ff00';
+                setTimeout(() => {
+                    volumeUp.style.backgroundColor = '#ff0000';
+                }, 200);
+            }
+        });
+        
+        // Volume down button
+        volumeDown.addEventListener('click', function() {
+            if (audio.volume > 0) {
+                audio.volume = Math.max(audio.volume - 0.1, 0);
+                volumeDown.style.backgroundColor = '#00ff00';
+                setTimeout(() => {
+                    volumeDown.style.backgroundColor = '#ff0000';
+                }, 200);
+            }
+        });
+        
+        // Update play button icon based on audio state
+        audio.addEventListener('play', function() {
+            playIcon.className = 'fas fa-pause';
+            playBtn.style.backgroundColor = '#00ff00';
+        });
+        
+        audio.addEventListener('pause', function() {
+            playIcon.className = 'fas fa-play';
+            playBtn.style.backgroundColor = '#ff0000';
+        });
+        
+        // Form submission feedback
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function() {
+                const submitBtn = this.querySelector('.submit-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Reset button after 5 seconds in case form doesn't redirect
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 5000);
+            });
+        }
+        
+        // Add smooth scrolling for better user experience
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add a simple animation for service items on hover
+        document.querySelectorAll('.services-list li').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(10px)';
+                this.style.transition = 'transform 0.3s ease';
+                this.style.color = '#ff0000';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+                this.style.color = '#ffffff';
+            });
+        });
+        
+        // Add Christmas greeting
+        const greetings = ["Merry Christmas!", "Happy Holidays!", "Season's Greetings!", "Happy New Year!"];
+        const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+        
+        // Update the holiday special text occasionally
+        setInterval(() => {
+            const holidaySpecial = document.querySelector('.holiday-special');
+            if (holidaySpecial) {
+                const messages = [
+                    "🎁 HOLIDAY SPECIAL: Book Before Dec 25th & Get 10% Off! 🎁",
+                    "🎄 Christmas Discount: 10% Off All Remodeling Projects! 🎄",
+                    "🌟 Limited Time Offer: Holiday Pricing Available Now! 🌟",
+                    "❄️ Winter Special: Schedule Now for Spring Remodeling! ❄️"
+                ];
+                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                holidaySpecial.textContent = randomMessage;
+                
+                // Add a quick animation
+                holidaySpecial.style.transform = 'scale(1.05)';
+                holidaySpecial.style.transition = 'transform 0.3s ease';
+                setTimeout(() => {
+                       holidaySpecial.style.transform = 'scale(1)';
+                }, 300);
+            }
+        }, 10000);
+        
+        // REMODELING MATCH GAME SCRIPT
+        const GAME_GRID_SIZE = 8;
+        const GAME_TARGET_SCORE = 100000;
+        const remodelIcons = ['🔨', '🔧', '🔩', '🏠', '🎨', '⚙️'];
+        
+        let gameGrid = [];
+        let gameScore = 0;
+        let selectedGameTile = null;
+        let isGameAnimating = false;
+
+        function createRemodelGrid() {
+            const gameGridEl = document.getElementById('remodelGameGrid');
+            gameGridEl.innerHTML = '';
+            gameGrid = [];
+            
+            for (let row = 0; row < GAME_GRID_SIZE; row++) {
+                gameGrid[row] = [];
+                for (let col = 0; col < GAME_GRID_SIZE; col++) {
+                    const icon = Math.floor(Math.random() * remodelIcons.length);
+                    gameGrid[row][col] = icon;
+                    
+                    const tile = document.createElement('div');
+                    tile.className = 'game-tile';
+                    tile.textContent = remodelIcons[icon];
+                    tile.dataset.row = row;
+                    tile.dataset.col = col;
+                    tile.addEventListener('click', () => handleGameTileClick(row, col));
+                    
+                    gameGridEl.appendChild(tile);
+                }
+            }
+            
+            while (findGameMatches().length > 0) {
+                removeGameMatches();
+                fillGameGrid();
+            }
+        }
+
+        function removeGameMatches() {
+            const matches = findGameMatches();
+            matches.forEach(({row, col}) => {
+                gameGrid[row][col] = Math.floor(Math.random() * remodelIcons.length);
+            });
+        }
+
+        function fillGameGrid() {
+            for (let row = 0; row < GAME_GRID_SIZE; row++) {
+                for (let col = 0; col < GAME_GRID_SIZE; col++) {
+                    if (gameGrid[row][col] === -1) {
+                        gameGrid[row][col] = Math.floor(Math.random() * remodelIcons.length);
+                    }
+                }
+            }
+        }
+
+        function handleGameTileClick(row, col) {
+            if (isGameAnimating) return;
+            
+            const tile = getGameTileElement(row, col);
+            
+            if (!selectedGameTile) {
+                selectedGameTile = {row, col};
+                tile.classList.add('selected');
+            } else {
+                const prevTile = getGameTileElement(selectedGameTile.row, selectedGameTile.col);
+                prevTile.classList.remove('selected');
+                
+                if (areGameNeighbors(selectedGameTile.row, selectedGameTile.col, row, col)) {
+                    swapGameTiles(selectedGameTile.row, selectedGameTile.col, row, col);
+                }
+                
+                selectedGameTile = null;
+            }
+        }
+
+        function areGameNeighbors(row1, col1, row2, col2) {
+            return (Math.abs(row1 - row2) === 1 && col1 === col2) ||
+                   (Math.abs(col1 - col2) === 1 && row1 === row2);
+        }
+
+        function swapGameTiles(row1, col1, row2, col2) {
+            [gameGrid[row1][col1], gameGrid[row2][col2]] = [gameGrid[row2][col2], gameGrid[row1][col1]];
+            updateGameTiles();
+            
+            setTimeout(() => {
+                const matches = findGameMatches();
+                if (matches.length === 0) {
+                    [gameGrid[row1][col1], gameGrid[row2][col2]] = [gameGrid[row2][col2], gameGrid[row1][col1]];
+                    updateGameTiles();
+                } else {
+                    processGameMatches();
+                }
+            }, 300);
+        }
+
+        function findGameMatches() {
+            const matches = new Set();
+            
+            for (let row = 0; row < GAME_GRID_SIZE; row++) {
+                for (let col = 0; col < GAME_GRID_SIZE - 2; col++) {
+                    const icon = gameGrid[row][col];
+                    if (icon === gameGrid[row][col+1] && icon === gameGrid[row][col+2]) {
+                        matches.add(`${row},${col}`);
+                        matches.add(`${row},${col+1}`);
+                        matches.add(`${row},${col+2}`);
+                    }
+                }
+            }
+            
+            for (let col = 0; col < GAME_GRID_SIZE; col++) {
+                for (let row = 0; row < GAME_GRID_SIZE - 2; row++) {
+                    const icon = gameGrid[row][col];
+                    if (icon === gameGrid[row+1][col] && icon === gameGrid[row+2][col]) {
+                        matches.add(`${row},${col}`);
+                        matches.add(`${row+1},${col}`);
+                        matches.add(`${row+2},${col}`);
+                    }
+                }
+            }
+            
+            return Array.from(matches).map(pos => {
+                const [row, col] = pos.split(',').map(Number);
+                return {row, col};
+            });
+        }
+
+        function processGameMatches() {
+            isGameAnimating = true;
+            const matches = findGameMatches();
+            
+            if (matches.length === 0) {
+                isGameAnimating = false;
+                return;
+            }
+            
+            gameScore += matches.length * 100;
+            document.getElementById('gameScore').textContent = gameScore.toLocaleString();
+            updateGameProgress();
+            
+            if (gameScore >= GAME_TARGET_SCORE) {
+                setTimeout(() => {
+                    showGameCompletionModal();
+                }, 1000);
+            }
+            
+            matches.forEach(({row, col}) => {
+                const tile = getGameTileElement(row, col);
+                tile.classList.add('matched');
+            });
+            
+            setTimeout(() => {
+                matches.forEach(({row, col}) => {
+                    gameGrid[row][col] = -1;
+                });
+                
+                for (let col = 0; col < GAME_GRID_SIZE; col++) {
+                    let emptyRow = GAME_GRID_SIZE - 1;
+                    for (let row = GAME_GRID_SIZE - 1; row >= 0; row--) {
+                        if (gameGrid[row][col] !== -1) {
+                            gameGrid[emptyRow][col] = gameGrid[row][col];
+                            if (emptyRow !== row) {
+                                gameGrid[row][col] = -1;
+                            }
+                            emptyRow--;
+                        }
+                    }
+                    
+                    for (let row = emptyRow; row >= 0; row--) {
+                        gameGrid[row][col] = Math.floor(Math.random() * remodelIcons.length);
+                    }
+                }
+                
+                updateGameTiles();
+                
+                setTimeout(() => {
+                    processGameMatches();
+                }, 300);
+            }, 500);
+        }
+
+        function getGameTileElement(row, col) {
+            return document.querySelector(`#remodelGameGrid [data-row="${row}"][data-col="${col}"]`);
+        }
+
+        function updateGameTiles() {
+            for (let row = 0; row < GAME_GRID_SIZE; row++) {
+                for (let col = 0; col < GAME_GRID_SIZE; col++) {
+                    const tile = getGameTileElement(row, col);
+                    const icon = gameGrid[row][col];
+                    if (icon !== -1) {
+                        tile.className = 'game-tile';
+                        tile.textContent = remodelIcons[icon];
+                    }
+                }
+            }
+        }
+
+        function updateGameProgress() {
+            const progress = Math.min((gameScore / GAME_TARGET_SCORE) * 100, 100);
+            const progressEl = document.getElementById('gameProgress');
+            progressEl.style.width = progress + '%';
+            progressEl.textContent = Math.floor(progress) + '%';
+        }
+
+        function showGameCompletionModal() {
+            isGameAnimating = true;
+            const modal = document.getElementById('gameCompletionModal');
+            const text = document.getElementById('gameCompletionText');
+            
+            text.textContent = `Outstanding! You reached ${gameScore.toLocaleString()} points! Your remodeling skills are top-notch!`;
+            modal.classList.add('show');
+        }
+
+        function resetRemodelGame() {
+            const modal = document.getElementById('gameCompletionModal');
+            modal.classList.remove('show');
+            
+            gameScore = 0;
+            document.getElementById('gameScore').textContent = gameScore;
+            updateGameProgress();
+            
+            selectedGameTile = null;
+            isGameAnimating = false;
+            createRemodelGrid();
+        }
+
+        // Initialize the remodeling game
+        createRemodelGrid();
+        updateGameProgress();
+    </script>
+</body>
+                  </html>
